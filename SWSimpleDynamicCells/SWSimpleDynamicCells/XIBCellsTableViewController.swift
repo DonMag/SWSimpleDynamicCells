@@ -60,5 +60,5 @@ class XIBCellsTableViewController: UITableViewController {
 		
         return cell
     }
-
+	
 }
