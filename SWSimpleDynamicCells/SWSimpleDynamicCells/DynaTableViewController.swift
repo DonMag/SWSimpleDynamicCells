@@ -29,21 +29,7 @@ class Type1Cell: UITableViewCell {
 
 class DynaTableViewController: UITableViewController {
 	
-	var titles = [
-		"Length",
-		"No Wrap",
-		"Wrap",
-		"Wrap",
-		"Testing",
-	]
-	
-	var bodies = [
-		"This all works well — until the content label's exceeds the width of the cell by just a little bit. The cells resize properly if it wraps a little bit past the end of the cell, and then this content is hidden.",
-		"This will be enough to wrap onto a second line.",
-		"This will be enough tooooooo wrap onto a second line.",
-		"Have you tried turning it off and back on again? Why, yes I have!",
-		"Let's see how this works."
-	]
+	var data = TitlesAndBodies()
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,14 +46,14 @@ class DynaTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return titles.count
+		return data.titles.count
 	}
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Type1Cell", for: indexPath) as! Type1Cell
 		
-		cell.titleLabel.text = titles[indexPath.row]
-		cell.bodyLabel.text = bodies[indexPath.row]
+		cell.titleLabel.text = data.titles[indexPath.row]
+		cell.bodyLabel.text = data.bodies[indexPath.row]
 
         return cell
     }
