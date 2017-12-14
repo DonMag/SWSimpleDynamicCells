@@ -8,4 +8,6 @@ The `XIBCellsTableViewController` and `FromXIBTableViewCell` demonstrate designi
 
 ---------------
 
+Dec 14, 2017 - added example of setting a background image for a section of a tableview
+
 Sept 11, 2017 - added 4-label example for "Fyn"... see "FynTable.storyboard" and "FynTableViewController.swift"
